@@ -4,10 +4,10 @@ color 6
 set version=v1.0.1
 set prefix=[定时关机任务]
 set /a SHUTDOWN_TIME=5*60
-title 定时自动关机脚本%version% By 锤子
+title 定时自动关机脚本%version% By HanskiJay
 
 echo ----------------------------------------
-echo 正在运行 '自动关机脚本%version%' BY 锤子
+echo 正在运行 '自动关机脚本%version%' BY HanskiJay
 echo ----------------------------------------
 
 :begin
