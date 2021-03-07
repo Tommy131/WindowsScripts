@@ -1,8 +1,9 @@
 @echo off
 chcp 65001
 color 6
-set version=v1.0.1
+set version=v1.0.2
 set prefix=[定时关机任务]
+set DAILY_TIME=03:00
 set /a SHUTDOWN_TIME=5*60
 title 定时自动关机脚本%version% By HanskiJay
 
@@ -42,7 +43,7 @@ goto begin
 
 
 :install
-schtasks /create /tn shutdownTask /tr "shutdown -s -t %SHUTDOWN_TIME%" /sc DAILY /st 03:00 /f
+schtasks /create /tn shutdownTask /tr "shutdown -s -t %SHUTDOWN_TIME%" /sc DAILY /st %DAILY_TIME% /f
 echo .
 echo .
 echo %prefix% 已成功将定时关机任务添加到Windows计划管理列表中.
