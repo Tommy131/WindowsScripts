@@ -1,7 +1,7 @@
 @echo off
 chcp 65001
 color 6
-set version=v1.0.2
+set version=v1.0.3
 set prefix=[定时关机任务]
 set DAILY_TIME=03:00
 set /a SHUTDOWN_TIME=5*60
@@ -14,16 +14,17 @@ echo ----------------------------------------
 :begin
 set input=
 set res=false
-set /p input=%prefix%请选择需要执行的指令或按回车键退出此脚本(help/install/uninstall/start/cancel/exit):
+set /p input=%prefix%请选择需要执行的指令或按回车键退出此脚本(help/install/uninstall/check/start/cancel/exit):
 echo .
 echo .
 
-if %input%==help       set res=true
-if %input%==install    set res=true
-if %input%==uninstall  set res=true
-if %input%==start      set res=true
-if %input%==cancel     set res=true
-if %input%==exit       set res=true
+if %input%==help      set res=true
+if %input%==install   set res=true
+if %input%==uninstall set res=true
+if %input%==check     set res=true
+if %input%==start     set res=true
+if %input%==cancel    set res=true
+if %input%==exit      set res=true
 
 if %res%==true (
     goto %input%
@@ -55,6 +56,13 @@ schtasks /delete /tn shutdownTask /f
 echo .
 echo .
 echo %prefix% 已成功删除定时关机任务.
+goto begin
+
+
+:check
+schtasks /query /tn shutdownTask
+echo .
+echo .
 goto begin
 
 
