@@ -10,13 +10,14 @@ title 定时自动关机脚本%version% By HanskiJay
 echo ----------------------------------------
 echo 正在运行 '自动关机脚本%version%' BY HanskiJay
 echo ----------------------------------------
+echo.
 
 :begin
 set input=
 set res=false
 set /p input=%prefix%请选择需要执行的指令或按回车键退出此脚本(help/install/uninstall/check/start/cancel/exit):
-echo .
-echo .
+echo.
+echo.
 
 if %input%==help      set res=true
 if %input%==install   set res=true
@@ -45,39 +46,39 @@ goto begin
 
 :install
 schtasks /create /tn shutdownTask /tr "shutdown -s -t %SHUTDOWN_TIME%" /sc DAILY /st %DAILY_TIME% /f
-echo .
-echo .
+echo.
+echo.
 echo %prefix% 已成功将定时关机任务添加到Windows计划管理列表中.
 goto begin
 
 
 :uninstall
 schtasks /delete /tn shutdownTask /f
-echo .
-echo .
+echo.
+echo.
 echo %prefix% 已成功删除定时关机任务.
 goto begin
 
 
 :check
 schtasks /query /tn shutdownTask
-echo .
-echo .
+echo.
+echo.
 goto begin
 
 
 :start
 shutdown -s -t %SHUTDOWN_TIME%
-echo .
-echo .
+echo.
+echo.
 echo %prefix% 你的电脑将在 %SHUTDOWN_TIME% 秒后自动关机!
 goto begin
 
 
 :cancel
 shutdown -a
-echo .
-echo .
+echo.
+echo.
 echo %prefix% 已取消关机计划.
 goto begin
 
