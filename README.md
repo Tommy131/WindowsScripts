@@ -1,11 +1,12 @@
-# AutoShutdowner
-用于给系统注册定时自动关机的脚本（没啥卵用）
+# WindowsScripts
+这个仓库为本人编写的一些常用Windows可执行脚本, 有需要的欢迎拿走, 留下你的Star就好啦~
+
 开源许可证: ![License](https://img.shields.io/badge/License-MIT-blue.svg) [Learn More](https://opensource.org/licenses/MIT)
 
 
 ------
 
-## 指令帮助
+## [1]AutoShutdowner 指令帮助
 双击脚本运行后, 可以按照提示注册/删除自动关机任务.
 1. 找到 `DAILY_TIME` 关键字样
 2. 修改以下代码更改每天自动关机的时间:
@@ -18,13 +19,21 @@ set /a SHUTDOWN_TIME=5*60
 3.重新运行脚本后生效.
 
 ## 图片展示
-![screenshot_help](pictures/screenshot_help.png)
+![screenshot_help](pictures/AutoShutdowner/screenshot_help.png)
 
-![screenshot_install](pictures/screenshot_install.png)
+![screenshot_install](pictures/AutoShutdowner/screenshot_install.png)
 
-![screenshot_start](pictures/screenshot_start.png)
+![screenshot_start](pictures/AutoShutdowner/screenshot_start.png)
 
-![screenshot_cancel](pictures/screenshot_cancel.png)
+![screenshot_cancel](pictures/AutoShutdowner/screenshot_cancel.png)
+
+
+
+## [2]ServiceRestarter 指令帮助
+此脚本为可选择重启指定的已注册服务 (按自己需要修改).
+
+## 图片展示
+![screenshot_help](pictures/ServiceRestarter/screenshot_help.png)
 
 
 ------
