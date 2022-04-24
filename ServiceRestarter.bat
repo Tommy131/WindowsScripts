@@ -27,7 +27,7 @@ net start php
 net stop nginx
 net start nginx
 echo Restarting MySQL service...
-mysqld restarts
+mysqld restart
 goto finish
 exit
 
