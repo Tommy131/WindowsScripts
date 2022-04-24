@@ -3,6 +3,8 @@
 
 开源许可证: ![License](https://img.shields.io/badge/License-MIT-blue.svg) [Learn More](https://opensource.org/licenses/MIT)
 
+推荐将此脚本的根目录注册到Windows系统中的`PATH环境变量`中。方可快速使用`运行`或者`CMD`执行脚本。
+
 
 ------
 
@@ -35,6 +37,14 @@ set /a SHUTDOWN_TIME=5*60
 ## 图片展示
 ![screenshot_help](pictures/ServiceRestarter/screenshot_help.png)
 
+
+
+## [3]PowerPlan 指令帮助
+此脚本可以快速修改当前系统的电源管理策略/计划。无需每次打开控制面板进入电源设置中修改。
+
+## 图片展示
+![powerplan_help](pictures/PowerPlan/powerplan_help_1.png)
+![powerplan_help](pictures/PowerPlan/powerplan_help_2.png)
 
 ------
 
